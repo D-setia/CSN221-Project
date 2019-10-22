@@ -1,7 +1,7 @@
 #include<stdio.h>
-#define MEMSIZE 8
+#define MEMSIZE 8 //Ideally we want at least memory of 16... but it's okay for a demonstration
 int writeCount = 0; //Shift every phi steps
-int phi = 1;
+int phi = 5; //Lower this for a faster demonstration
 int memory[MEMSIZE];
 //Here MEMSIZE includes gapline also
 int start = 0;
