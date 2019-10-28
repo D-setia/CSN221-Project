@@ -1,7 +1,7 @@
 #include<stdio.h>
 #define MEMSIZE 8 //Ideally we want at least memory of 16... but it's okay for a demonstration
 int writeCount = 0; //Shift every phi steps
-int phi = 5; //Lower this for a faster demonstration
+int phi = 1; //Lower this for a faster demonstration
 int memory[MEMSIZE];
 //Here MEMSIZE includes gapline also
 int start = 0;
@@ -35,10 +35,11 @@ void memAccess(int logicalAddress,int inp)
 		return;
 	}
 
-	start = (start+1)%MEMSIZE;
+	start = (start+1)%(MEMSIZE-1);
 	memory[gap] = memory[MEMSIZE-1];
-	memory [translate(logicalAddress)] = inp;
 	gap = MEMSIZE-1;
+	memory [translate(logicalAddress)] = inp;
+
 }
 
 
@@ -63,9 +64,10 @@ int main()
 		memory[i] = i;
 	printTable();
 
-	for(int i = 0;i<30;i++)
+	for(int j = 0;j<5;j++)
+	for(int i = 0;i<MEMSIZE-1;i++)
 	{
-		memAccess(i%MEMSIZE,i%MEMSIZE);
+		memAccess(i,i);
 		printTable();
 	}
 
