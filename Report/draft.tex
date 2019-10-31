@@ -22,7 +22,7 @@
 18117056\\
 mahmed@cs.iitr.ac.in}\\
 %\and
-\IEEEauthorblockN {Suraaj K.S}
+\IEEEauthorblockN {Suraaj K S}
 \IEEEauthorblockA{\textit{CSE \rom{2} year} \\
 \textit{IIT Roorkee}\\
 18117106\\
@@ -52,11 +52,11 @@ vbhargava@ec.iitr.ac.in}\\
 18117047\\
 ksrikant@ec.iitr.ac.in}
 \and 
-\IEEEauthorblockN{Buri Vishnu}
+\IEEEauthorblockN{Burri Vishnu}
 \IEEEauthorblockA{\textit{ECE \rom{2} year} \\
 \textit{IIT Roorkee}\\
 18116024\\
-bvishnu@ec.iitr.ac.in}
+breddy3@ec.iitr.ac.in}
 }
 \title{Start Gap Wear Levelling for Phase Change Memory\\}
 \begin{document}
@@ -66,8 +66,7 @@ bvishnu@ec.iitr.ac.in}
 Modern main memory present today is heavily based on DRAM,namely SDRAM. However, modern memory consisting
 entirely of DRAM is already hitting power and cost limits.
 Exploiting emerging memory technologies, such as Phase-Change
-Memory (PCM) and Flash, has become crucial to build larger ca-
-pacity memory systems in the future while remaining within the
+Memory (PCM) and Flash, has become crucial to build larger capacity memory systems in the future while remaining within the
 overall system cost and power budgets.\\
 \newline
 Phase Change Memory (PCM) is an emerging memory technology that can increase main memory capacity in a cost-effective and
@@ -77,8 +76,7 @@ a lifetime of only a few years under ideal conditions. Furthermore,
 we show that non-uniformity in writes to different cells reduces the
 achievable lifetime of PCM system by 20x. Writes to PCM cells
 can be made uniform with Wear-Leveling. Unfortunately, existing
-wear-leveling techniques require large storage tables and indirec-
-tion, resulting in significant area and latency overheads. \\
+wear-leveling techniques require large storage tables and indirection, resulting in significant area and latency overheads. \\
 \\We implement Start-Gap, an effective wear-leveling
 technique that uses only two registers. By combining Start-Gap
 with simple address-space serialisation techniques we show that
@@ -99,12 +97,12 @@ The memory hierarchy of an Intel Haswell Mobile processor circa 2013 is:
 	\item Processor registers – the fastest possible access (usually 1 CPU cycle). A few thousand bytes in size.
 	\item Cache
 		\begin{itemize}
-			\item Level 0 (L0) Micro operations cache – 6 KB  in size
-        			\item Level 1 (L1) Instruction cache – 128 KB in size
-        			\item Level 1 (L1) Data cache – 128 KB in size. Best access speed is around 700 GB/second
-        			\item Level 2 (L2) Instruction and data (shared) – 1 MB in size. Best access speed is around 200 GB/second
-        			\item Level 3 (L3) Shared cache – 6 MB in size. Best access speed is around 100 GB/second
-        			\item Level 4 (L4) Shared cache – 128 MB in size. Best access speed is around 40 GB/second
+			\item Level 0 (L0) Micro operations cache - 6 KB  in size
+        			\item Level 1 (L1) Instruction cache - 128 KB in size
+        			\item Level 1 (L1) Data cache - 128 KB in size. Best access speed is around 700 GB/second
+        			\item Level 2 (L2) Instruction and data (shared) - 1 MB in size. Best access speed is around 200 GB/second
+        			\item Level 3 (L3) Shared cache - 6 MB in size. Best access speed is around 100 GB/second
+        			\item Level 4 (L4) Shared cache - 128 MB in size. Best access speed is around 40 GB/second
 		\end{itemize}
 \begin{figure}
 		\begin{center}
@@ -112,9 +110,9 @@ The memory hierarchy of an Intel Haswell Mobile processor circa 2013 is:
 		\caption {Memory hierarchy}
 		\end{center}	
 	\end{figure}
-	\item Main memory (Primary storage) – Gigabytes in size. Best access speed is around 10 GB/second. In the case of a NUMA machine, access times may not be uniform.
-	\item Disk storage (Secondary storage) – Terabytes in size. As of 2017, best access speed is from a consumer solid state drive is about 2000 MB/second.
-	\item Nearline storage (Tertiary storage) – Up to exabytes in size. As of 2013, best access speed is about 160 MB/second.
+	\item Main memory (Primary storage) - Gigabytes in size. Best access speed is around 10 GB/second. In the case of a NUMA machine, access times may not be uniform.
+	\item Disk storage (Secondary storage) - Terabytes in size. As of 2017, best access speed is from a consumer solid state drive is about 2000 MB/second.
+	\item Nearline storage (Tertiary storage) - Up to exabytes in size. As of 2013, best access speed is about 160 MB/second.
 \end{itemize}
 \section{DRAM Heirarchy}
 The rank of a DRAM module is the highest level of organization within a DIMM. Below that, each chip is organized into a number of banks and memory arrays containing rows and columns. Figure shows a DRAM chip with four banks. \\
@@ -140,7 +138,7 @@ DRAM chip, the internal banks would each have four memory arrays. Figure shows a
 \end{figure}
 \\Sense amplifiers perform precharge operations on capacitors and generate logic-level outputs for a number of data buffers that store the data until it can be retrieved by a memory controller or CPU.\\
 \\DRAM is extremely common in personal computers and is a basic component that any computer needs to work properly. DRAM works by using the presence or absence of charge on a capacitor to store data. Since a single DRAM cell is composed of only two
-components—a transistor and a capacitor—DRAM can be made in high densities, and it is inexpensive compared to other types of memory.\cite{b1}
+components - a transistor and a capacitor - DRAM can be made in high densities, and it is inexpensive compared to other types of memory.\cite{b1}
 \\
 \\
 
